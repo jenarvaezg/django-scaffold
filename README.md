@@ -5,7 +5,7 @@ Small scaffold for a django project with a PostgreSQL DB, using docker-compose.
 To rename the project, the script `rename_project.sh` can be used.
 
 ```
-./rename_project.sh my_awesome_project
+./scripts/rename_project.sh my_awesome_project
 ```
 
 To run tests: 
