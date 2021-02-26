@@ -17,7 +17,7 @@ services:
     build: .
     env_file:
       - .env
-    command: wait-for-it -t 60 db:5432 -- sleep 10000000 # python manage.py runserver 0.0.0.0:8000
+    command: wait-for-it -t 60 db:5432 -- python manage.py runserver 0.0.0.0:8000
     volumes:
       - "./src/:/app"
     ports:

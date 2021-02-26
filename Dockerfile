@@ -20,7 +20,7 @@ RUN pip install --no-cache-dir --upgrade pip poetry \
 
 COPY src/pyproject.toml $HOMEDIR/pyproject.toml
 COPY src/poetry.lock poetry.lock
-#RUN if [ "$ENV" = "local" ] ; then poetry install ; else poetry install --no-dev ; fi
+RUN if [ "$ENV" = "local" ] ; then poetry install ; else poetry install --no-dev ; fi
 
 COPY src $HOMEDIR
 EXPOSE 80
