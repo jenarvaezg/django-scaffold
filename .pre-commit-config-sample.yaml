@@ -1,0 +1,16 @@
+repos:
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+    -   id: flake8
+        # This additional dependencies are neccesary until 2.2.x is ready
+        # https://github.com/PyCQA/pyflakes/pull/457#issuecomment-555714836
+        additional_dependencies: [
+            '-e', 'git+https://github.com/pycqa/pyflakes@1911c20#egg=pyflakes',
+            '-e', 'git+https://github.com/pycqa/pycodestyle@d219c68#egg=pycodestyle',
+        ]
+        args: [--config=src/pyproject.toml]
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'master'  # Use the sha / tag you want to point at
+    hooks:
+    -   id: mypy
