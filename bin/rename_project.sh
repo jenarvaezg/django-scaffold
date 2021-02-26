@@ -6,4 +6,4 @@ if [ -z $1 ]; then
 fi
 
 grep --include=*.py -lr scaffold . |  xargs sed -i '' -e "s/scaffold/$1/g"
-mv scaffold $1
+mv src/scaffold src/$1
